@@ -24,6 +24,7 @@
          if (pageYOffset >= sectionTop - sectionHeight / 3) {
              current = section.getAttribute('id');
          }
+
      });
 
      navLinks.forEach(link => {
