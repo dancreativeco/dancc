@@ -14,8 +14,5 @@ My interests inside of tech include
 - Info Sec
 - Interactions between tech and people
 
-<img src="./rmimages/pup.jpeg" style="height: 200px">
-
-
-
+```Hello world```
 
