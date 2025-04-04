@@ -1,6 +1,4 @@
-// Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
     document.querySelectorAll('nav a, .hero a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -79,10 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Start typing effect after a brief delay
     setTimeout(typeEffect, 1000);
     
-    // Form submission with basic validation
+    
     const contactForm = document.querySelector('.contact form');
     
     contactForm.addEventListener('submit', function(e) {
@@ -92,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
         
-        // Simple validation
+      
         if (nameInput.value.trim() === '') {
             showError(nameInput, 'Please enter your name');
             return;
@@ -113,17 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // If validation passes, simulate form submission
         const submitButton = contactForm.querySelector('button[type="submit"]');
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
         
-        // Simulate sending (would be replaced with actual AJAX in production)
+
         setTimeout(() => {
             contactForm.reset();
             submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
             
-            // Reset button after delay
+
             setTimeout(() => {
                 submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
                 submitButton.disabled = false;
@@ -131,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
     
-    // Helper functions for form validation
+
     function showError(input, message) {
         input.classList.add('error');
         
@@ -158,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return regex.test(email);
     }
     
-    // Add additional CSS for JS-enabled effects
+
     const style = document.createElement('style');
     style.textContent = `
         nav a.active {
@@ -257,6 +253,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.head.appendChild(style);
     
-    // Initialize reveal on page load
     revealOnScroll();
 });
