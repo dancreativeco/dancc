@@ -254,6 +254,15 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    header{
+        padding-top: 1.5rem;
+    }
     h1 {
         font-size: 2.5rem;
     }
