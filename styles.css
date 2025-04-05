@@ -242,6 +242,95 @@ nav a:hover {
 .contact-item h3 {
     margin-bottom: 0.5rem;
 }
+/* Add these styles to your existing CSS file */
+
+/* Contact section with form */
+.contact-form-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.contact-form {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive styles for the contact form */
+@media (max-width: 1024px) {
+    .contact-form-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Footer */
 footer {
